@@ -1,0 +1,237 @@
+/* ฟอนต์ Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap');
+
+/* พื้นหลังไล่เฉดสีม่วง-ดำ พร้อมอนิเมชั่น */
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Prompt', 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #2d0036, #6a0572, #12002f, #3a0ca3, #2d0036);
+  background-size: 400% 400%;
+  animation: bgMove 15s ease-in-out infinite;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes bgMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* กรอบโปรไฟล์หลัก */
+.profile-container {
+  background: rgba(40, 0, 60, 0.92);
+  border-radius: 32px;
+  box-shadow: 0 12px 48px 0 #6a0572cc, 0 0 0 8px #a4508b33;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  max-width: 420px;
+  width: 95vw;
+  border: 3px solid #a4508b;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 1.2s cubic-bezier(.68,-0.55,.27,1.55);
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9);}
+  to { opacity: 1; transform: scale(1);}
+}
+
+/* วงกลมเรืองแสงตกแต่ง */
+.glow-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(32px);
+  opacity: 0.5;
+  z-index: 0;
+  animation: float 8s ease-in-out infinite alternate;
+}
+.glow1 { width: 120px; height: 120px; background: #a4508b; top: -40px; left: -40px; }
+.glow2 { width: 80px; height: 80px; background: #3a0ca3; bottom: -30px; right: -30px; animation-delay: 2s;}
+@keyframes float {
+  0% { transform: translateY(0);}
+  100% { transform: translateY(30px);}
+}
+
+/* รูปโปรไฟล์ */
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 5px solid #a4508b;
+  object-fit: cover;
+  box-shadow: 0 0 32px #a4508b77, 0 0 0 8px #fff1;
+  margin: 0 auto 1.2rem auto;
+  display: block;
+  transition: box-shadow 0.4s;
+  z-index: 1;
+  position: relative;
+}
+.profile-img:hover {
+  box-shadow: 0 0 64px #a4508b, 0 0 0 12px #fff2;
+}
+
+/* ชื่อ */
+.profile-name {
+  font-size: 2.2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #e0aaff;
+  margin-bottom: 0.2rem;
+  text-shadow: 0 2px 12px #6a0572cc;
+  transition: color 0.3s;
+  z-index: 1;
+  position: relative;
+  font-family: 'Prompt', sans-serif;
+}
+.profile-name:hover {
+  color: #a4508b;
+}
+
+/* อายุ */
+.profile-age {
+  font-size: 1.1rem;
+  color: #c77dff;
+  margin-bottom: 1.2rem;
+  z-index: 1;
+  position: relative;
+}
+
+/* กรอบโซเชียล */
+.social-box {
+  background: rgba(58,12,163,0.18);
+  border-radius: 16px;
+  padding: 0.7rem 0.5rem;
+  margin: 1.2rem 0 1.5rem 0;
+  box-shadow: 0 2px 12px #a4508b33;
+  border: 1.5px solid #a4508b55;
+  z-index: 1;
+  position: relative;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.social-links a {
+  color: #c77dff;
+  font-size: 2rem;
+  transition: color 0.3s, transform 0.3s;
+  text-decoration: none;
+  filter: drop-shadow(0 0 8px #a4508b55);
+}
+.social-links a:hover {
+  color: #fff;
+  transform: scale(1.18) rotate(-10deg);
+  text-shadow: 0 0 16px #a4508b;
+}
+
+/* กรอบ section */
+.section-box {
+  background: rgba(106,5,114,0.13);
+  border-radius: 14px;
+  padding: 1rem 1.2rem 0.7rem 1.2rem;
+  margin-bottom: 1.1rem;
+  border: 1.5px solid #a4508b33;
+  box-shadow: 0 1px 8px #a4508b22;
+  z-index: 1;
+  position: relative;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+.section-box:hover {
+  box-shadow: 0 4px 24px #a4508b55;
+  border: 1.5px solid #a4508b;
+}
+
+.section-title {
+  font-size: 1.15rem;
+  color: #a4508b;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 6px #6a0572cc;
+  transition: color 0.3s;
+  font-weight: bold;
+  font-family: 'Prompt', sans-serif;
+}
+.section-title:hover {
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+li {
+  margin-bottom: 0.2rem;
+  padding: 0.35rem 1.1rem;
+  border-radius: 8px;
+  background: rgba(106,5,114,0.18);
+  transition: background 0.3s, transform 0.3s;
+  display: inline-block;
+  font-size: 1rem;
+  border: 1px solid #a4508b33;
+  box-shadow: 0 1px 6px #a4508b22;
+  cursor: pointer;
+  font-family: 'Prompt', sans-serif;
+}
+li:hover {
+  background: #a4508b55;
+  transform: scale(1.08) rotate(-2deg);
+  color: #fff;
+  border: 1px solid #fff2;
+}
+    .game-logo {
+      height: 36px;
+      width: auto;
+      vertical-align: middle;
+      border-radius: 8px;
+      background: #fff1;
+      padding: 4px 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 1px 8px #a4508b33;
+      display: block;
+      margin: 0 auto;
+    }
+    .game-link:hover .game-logo {
+      transform: scale(1.15) rotate(-5deg);
+      box-shadow: 0 0 16px #a4508b;
+      background: #fff3;
+    }
+    .music-link {
+      color: #c77dff;
+      text-decoration: none;
+      transition: color 0.3s;
+      font-weight: bold;
+      font-family: 'Prompt', sans-serif;
+    }
+    .music-link:hover {
+      color: #fff;
+      text-shadow: 0 0 8px #a4508b;
+    }
+    /* ปรับขนาด li สำหรับเกม */
+    .game-list li {
+      padding: 0.3rem 0.5rem;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+    }
+    .game-list {
+      gap: 1.2rem;
+    }
+/* Responsive */
+@media (max-width: 600px) {
+  .profile-container {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    max-width: 98vw;
+  }
+  .profile-img {
+    width: 90px; height: 90px;
+  }
+  .profile-name { font-size: 1.3rem;}
+}
